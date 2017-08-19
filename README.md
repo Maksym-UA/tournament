@@ -9,6 +9,7 @@
   * each player should be paired with another player with the same number of wins, or as close as possible
 
 ## SETUP
+
 - You'll need to use a virtual machine (VM) to run an SQL database server and a web app that uses it. 
 - You'll need to user Vagrant and VirtualBox to install and manage the VM. 
 
@@ -18,7 +19,7 @@ VirtualBox is the software that actually runs the virtual machine. You can downl
 - Install the platform package for your operating system. You do not need the extension pack or the SDK. You do not 
 need to launch VirtualBox after installing it; Vagrant will do that.
 
- *Ubuntu users: If you are running Ubuntu 14.04, install VirtualBox using the Ubuntu Software Center instead. 
+    *Ubuntu users: If you are running Ubuntu 14.04, install VirtualBox using the Ubuntu Software Center instead. 
 Due to a reported bug, installing VirtualBox from the site may uninstall other software you need.*
 
 ### Installing Vagrant
@@ -26,9 +27,9 @@ Due to a reported bug, installing VirtualBox from the site may uninstall other s
 Vagrant is the software that configures the VM and lets you share files between your host computer and the VM's filesystem. 
 - Download it from [vagrantup.com](https://www.vagrantup.com/) Install the version for your operating system.
 
- *Windows users: The Installer may ask you to grant network permissions to Vagrant or make a firewall exception. Be sure to allow this.*
+    *Windows users: The Installer may ask you to grant network permissions to Vagrant or make a firewall exception. Be sure to allow this.*
 
-- You need to download [Vagrant file](tournament/Vagrantfile). It configures your VM settings. The file may be located inside your Downloads folder.
+- You need to download [Vagrant file](Maksym-UA/tournament/blob/master/Vagrantfile). It configures your VM settings. The file may be located inside your Downloads folder.
 
 - Change to this directory in your terminal with `cd`. Inside, you will find another directory called vagrant. Change directory to the vagrant directory.
 
@@ -62,8 +63,10 @@ If you reboot your computer, you will need to run `vagrant up` to restart the VM
 
 The PostgreSQL database server will automatically be started inside the VM. You can use the `psql` command-line tool to access it and run SQL statements.
 
+### That's it you are ready to go! Feel free to make any changes to the provided code.
 
-##CONTACT
+
+## CONTACT
 
 Please send you feedback to
 
