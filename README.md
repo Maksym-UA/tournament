@@ -8,44 +8,35 @@
   * players are not eliminated
   * each player should be paired with another player with the same number of wins, or as close as possible
 
-SETUP
-=====
+## SETUP
+- You'll need to use a virtual machine (VM) to run an SQL database server and a web app that uses it. 
+- You'll need to user Vagrant and VirtualBox to install and manage the VM. 
 
-Installing the Virtual Machine
-You'll need to use a virtual machine (VM) to run an SQL database server and a web app that uses it. 
+### Installing VirtualBox
 
-You'll need to user Vagrant and VirtualBox to install and manage the VM. 
-
-
-
-Install VirtualBox
-VirtualBox is the software that actually runs the virtual machine. You can download it from virtualbox.org, here. 
-Install the platform package for your operating system. You do not need the extension pack or the SDK. You do not 
+VirtualBox is the software that actually runs the virtual machine. You can download it from [virtualbox.org](https://www.virtualbox.org/) 
+- Install the platform package for your operating system. You do not need the extension pack or the SDK. You do not 
 need to launch VirtualBox after installing it; Vagrant will do that.
 
-Ubuntu users: If you are running Ubuntu 14.04, install VirtualBox using the Ubuntu Software Center instead. 
-Due to a reported bug, installing VirtualBox from the site may uninstall other software you need.
+- *Ubuntu users: If you are running Ubuntu 14.04, install VirtualBox using the Ubuntu Software Center instead. 
+Due to a reported bug, installing VirtualBox from the site may uninstall other software you need.*
 
-Install Vagrant
+### Installing Vagrant
+
 Vagrant is the software that configures the VM and lets you share files between your host computer and the VM's filesystem. 
-Download it from vagrantup.com. Install the version for your operating system.
+- Download it from [vagrantup.com](https://www.vagrantup.com/) Install the version for your operating system.
 
-Windows users: The Installer may ask you to grant network permissions to Vagrant or make a firewall exception. Be sure to allow this.
+- *Windows users: The Installer may ask you to grant network permissions to Vagrant or make a firewall exception. Be sure to allow this.*
 
+- You need to download [Vagrant file](tournament/Vagrantfile.File). It configures your VM settings. The file may be located inside your Downloads folder.
 
-You can download and unzip this file: FSND-Virtual-Machine.zip This will give you a directory called FSND-Virtual-Machine. 
-It may be located inside your Downloads folder.
+- Change to this directory in your terminal with `cd`. Inside, you will find another directory called vagrant. Change directory to the vagrant directory.
 
-Alternately, you can use Github to fork and clone the repository https://github.com/udacity/fullstack-nanodegree-vm.
-
-Change to this directory in your terminal with cd. Inside, you will find another directory called vagrant. Change directory to the vagrant directory.
-
-Start the virtual machine
-From your terminal, inside the vagrant subdirectory, run the command vagrant up. This will cause Vagrant to download the Linux 
+- Start the virtual machine
+- From your terminal, inside the vagrant subdirectory, run the command `vagrant up`. This will cause Vagrant to download the Linux 
 operating system and install it. This may take quite a while (many minutes) depending on how fast your Internet connection is.
 
-
-When vagrant up is finished running, you will get your shell prompt back. At this point, you can run vagrant ssh to log in to your newly installed Linux VM!
+- When vagrant up is finished running, you will get your shell prompt back. At this point, you can run `vagrant ssh` to log in to your newly installed Linux VM!
 
 Inside the VM, change directory to /vagrant and look around with ls.
 
