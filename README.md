@@ -1,6 +1,6 @@
-#SWISS GAME
+# SWISS GAME
 
-###Tournament Planner
+### Tournament Planner
 
 This project uses the PostgreSQL database to keep track of players and matches in a game tournament.
 The game tournament uses the Swiss system for pairing up players in each round: 
