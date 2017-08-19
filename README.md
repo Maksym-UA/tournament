@@ -29,7 +29,7 @@ Vagrant is the software that configures the VM and lets you share files between 
 
     *Windows users: The Installer may ask you to grant network permissions to Vagrant or make a firewall exception. Be sure to allow this.*
 
-- You need to download [Vagrant file](Maksym-UA/tournament/blob/master/Vagrantfile). It configures your VM settings. The file may be located inside your Downloads folder.
+-  You need to download [Vagrant file](blob/master/Vagrantfile). It configures your VM settings. The file may be located inside your Downloads folder.
 
 - Change to this directory in your terminal with `cd`. Inside, you will find another directory called vagrant. Change directory to the vagrant directory.
 
