@@ -8,6 +8,7 @@
   * players are not eliminated
   * each player should be paired with another player with the same number of wins, or as close as possible
 
+  
 ## SETUP
 
 - You'll need to use a virtual machine (VM) to run an SQL database server and a web app that uses it. 
@@ -22,6 +23,7 @@ need to launch VirtualBox after installing it; Vagrant will do that.
     *Ubuntu users: If you are running Ubuntu 14.04, install VirtualBox using the Ubuntu Software Center instead. 
 Due to a reported bug, installing VirtualBox from the site may uninstall other software you need.*
 
+
 ### Installing Vagrant
 
 Vagrant is the software that configures the VM and lets you share files between your host computer and the VM's filesystem. 
@@ -29,7 +31,7 @@ Vagrant is the software that configures the VM and lets you share files between 
 
     *Windows users: The Installer may ask you to grant network permissions to Vagrant or make a firewall exception. Be sure to allow this.*
 
--  You need to download [Vagrant file](Vagrantfile). It configures your VM settings. The file may be located inside your Downloads folder.
+- You need to download [Vagrant file](Vagrantfile). It configures your VM settings. The file may be located inside your Downloads folder.
 
 - Change to this directory in your terminal with `cd`. Inside, you will find another directory called vagrant. Change directory to the vagrant directory.
 
@@ -45,6 +47,7 @@ This means that you can edit code in your favorite text editor, and run it insid
 - Files in the VM's /vagrant directory are shared with the `vagrant` folder on your computer. But other data inside the VM is not. 
 For instance, the PostgreSQL database itself lives only inside the VM.
 
+
 ### Creating Your Database
 
 - Before you can run the code or create tables, you'll need to use the create database command in psql to create the database. Use the name tournament for your database.
@@ -53,20 +56,23 @@ Then you can connect psql to your new database and create your tables from the s
 Use the command `\i tournament.sql` to import the whole file into psql at once. 
 Remember, if you get your database into a bad state you can always `drop` tables or the whole database to clear it out.
 
+
 ### Logging out and in
 If you type `exit` (or `Ctrl-D`) at the shell prompt inside the VM, you will be logged out, and put back into your host computer's shell. To log back in, make sure you're 
 in the same directory and type `vagrant ssh` again.
 
 If you reboot your computer, you will need to run `vagrant up` to restart the VM.
 
+
 ### Running the database
 
 The PostgreSQL database server will automatically be started inside the VM. You can use the `psql` command-line tool to access it and run SQL statements.
 
+
 ### That's it you are ready to go! Feel free to make any changes to the provided code.
 
 
-## CONTACT
+### CONTACT
 
 Please send you feedback to
 
