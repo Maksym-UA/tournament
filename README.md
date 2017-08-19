@@ -18,7 +18,7 @@ VirtualBox is the software that actually runs the virtual machine. You can downl
 - Install the platform package for your operating system. You do not need the extension pack or the SDK. You do not 
 need to launch VirtualBox after installing it; Vagrant will do that.
 
-- *Ubuntu users: If you are running Ubuntu 14.04, install VirtualBox using the Ubuntu Software Center instead. 
+ *Ubuntu users: If you are running Ubuntu 14.04, install VirtualBox using the Ubuntu Software Center instead. 
 Due to a reported bug, installing VirtualBox from the site may uninstall other software you need.*
 
 ### Installing Vagrant
@@ -26,9 +26,9 @@ Due to a reported bug, installing VirtualBox from the site may uninstall other s
 Vagrant is the software that configures the VM and lets you share files between your host computer and the VM's filesystem. 
 - Download it from [vagrantup.com](https://www.vagrantup.com/) Install the version for your operating system.
 
-- *Windows users: The Installer may ask you to grant network permissions to Vagrant or make a firewall exception. Be sure to allow this.*
+ *Windows users: The Installer may ask you to grant network permissions to Vagrant or make a firewall exception. Be sure to allow this.*
 
-- You need to download [Vagrant file](tournament/Vagrantfile.File). It configures your VM settings. The file may be located inside your Downloads folder.
+- You need to download [Vagrant file](tournament/Vagrantfile). It configures your VM settings. The file may be located inside your Downloads folder.
 
 - Change to this directory in your terminal with `cd`. Inside, you will find another directory called vagrant. Change directory to the vagrant directory.
 
@@ -38,33 +38,32 @@ operating system and install it. This may take quite a while (many minutes) depe
 
 - When vagrant up is finished running, you will get your shell prompt back. At this point, you can run `vagrant ssh` to log in to your newly installed Linux VM!
 
-Inside the VM, change directory to /vagrant and look around with ls.
+- Inside the VM, change directory to `/vagrant` and look around with `ls`. Any file you create in one will be automatically shared to the other. 
+This means that you can edit code in your favorite text editor, and run it inside the VM.
 
-The files you see here are the same as the ones in the vagrant subdirectory on your computer (where you started Vagrant from). 
-Any file you create in one will be automatically shared to the other. This means that you can edit code in your favorite text 
-editor, and run it inside the VM.
-
-Files in the VM's /vagrant directory are shared with the vagrant folder on your computer. But other data inside the VM is not. 
+- Files in the VM's /vagrant directory are shared with the `vagrant` folder on your computer. But other data inside the VM is not. 
 For instance, the PostgreSQL database itself lives only inside the VM.
 
-Running the database
-The PostgreSQL database server will automatically be started inside the VM. You can use the psql command-line tool to access it and run SQL statements:
+### Creating Your Database
 
-
-Creating Your Database
-==============
-
-Creating Your Database
-Before you can run the code or create tables, you'll need to use the create database command in psql to create the database. Use the name tournament for your database.
-
+- Before you can run the code or create tables, you'll need to use the create database command in psql to create the database. Use the name tournament for your database.
 Then you can connect psql to your new database and create your tables from the statements you've written in tournament.sql. 
 
-Use the command \i tournament.sql to import the whole file into psql at once.
-Remember, if you get your database into a bad state you can always drop tables or the whole database to clear it out.
+Use the command `\i tournament.sql` to import the whole file into psql at once. 
+Remember, if you get your database into a bad state you can always `drop` tables or the whole database to clear it out.
+
+### Logging out and in
+If you type `exit` (or `Ctrl-D`) at the shell prompt inside the VM, you will be logged out, and put back into your host computer's shell. To log back in, make sure you're 
+in the same directory and type `vagrant ssh` again.
+
+If you reboot your computer, you will need to run `vagrant up` to restart the VM.
+
+### Running the database
+
+The PostgreSQL database server will automatically be started inside the VM. You can use the `psql` command-line tool to access it and run SQL statements.
 
 
-CONTACT
-=======
+##CONTACT
 
 Please send you feedback to
 
