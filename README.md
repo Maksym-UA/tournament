@@ -33,7 +33,10 @@ Vagrant is the software that configures the VM and lets you share files between 
 
    *If Vagrant is successfully installed, you will be able to run vagrant `--version`in your terminal to see the version number.
 The shell prompt in your terminal may differ. Here, the `$` sign is the shell prompt.*
-   ```$ vagrant --version```
+
+    ```
+    $ vagrant --version
+    ```
 
 - You need to download [tournament folder](https://github.com/Maksym-UA/tournament). It configures your VM settings. The file may be located inside your Downloads folder. Change to this directory in your terminal with `cd`. Inside, you will find another directory called vagrant. Change directory to the vagrant directory.
 
