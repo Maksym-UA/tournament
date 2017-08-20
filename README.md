@@ -31,25 +31,36 @@ Vagrant is the software that configures the VM and lets you share files between 
 
     *Windows users: The Installer may ask you to grant network permissions to Vagrant or make a firewall exception. Be sure to allow this.*
 
-- You need to download [Vagrant file](Vagrantfile). It configures your VM settings. The file may be located inside your Downloads folder.
-
    *If Vagrant is successfully installed, you will be able to run vagrant `--version`in your terminal to see the version number.
 The shell prompt in your terminal may differ. Here, the `$` sign is the shell prompt.*
-
    ```$ vagrant --version```
 
-- Change to this directory in your terminal with `cd`. Inside, you will find another directory called vagrant. Change directory to the vagrant directory.
+- You need to download [tournament folder](https://github.com/Maksym-UA/tournament). It configures your VM settings. The file may be located inside your Downloads folder. Change to this directory in your terminal with `cd`. Inside, you will find another directory called vagrant. Change directory to the vagrant directory.
+
+    ```
+    $cd Downloads/tournament
+    $ ls
+    Vagrantfile  tournament.py  tournament.sql tournament_test.py readme.md
+    ```
 
 - Start the virtual machine
 - From your terminal, inside the vagrant subdirectory, run the command `vagrant up`. This will cause Vagrant to download the Linux 
 operating system and install it. This may take quite a while (many minutes) depending on how fast your Internet connection is.
 
+    ```
+    $ vagrant up
+    ```
+
 - When vagrant up is finished running, you will get your shell prompt back. At this point, you can run `vagrant ssh` to log in to your newly installed Linux VM!
+
+    ```
+    $ vagrant ssh
+    ```
 
 - Inside the VM, change directory to `/vagrant` and look around with `ls`. Any file you create in one will be automatically shared to the other. 
 This means that you can edit code in your favorite text editor, and run it inside the VM.
 
-- Files in the VM's /vagrant directory are shared with the `vagrant` folder on your computer. But other data inside the VM is not. 
+- Files in the VM's `/vagrant` directory are shared with the `vagrant` folder on your computer. But other data inside the VM is not. 
 For instance, the PostgreSQL database itself lives only inside the VM.
 
 
@@ -71,7 +82,14 @@ If you reboot your computer, you will need to run `vagrant up` to restart the VM
 
 ### Running the database
 
-The PostgreSQL database server will automatically be started inside the VM. You can use the `psql` command-line tool to access it and run SQL statements.
+The PostgreSQL database server will automatically be started inside the VM. You can use the `psql` command-line tool to access it and run SQL statements. Run `\c tournament` to run the database.
+
+    ```
+    vagrant@vagrant:/vagrant/tournament$ psql
+    vagrant=> \c tournament
+    You are now connected to database "tournament" as user "vagrant".
+    tournament=>
+    ```
 
 
 ### That's it you are ready to go! Feel free to make any changes to the provided code.
