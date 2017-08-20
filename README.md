@@ -85,7 +85,7 @@ If you reboot your computer, you will need to run `vagrant up` to restart the VM
 
 ### Running the database
 
-The PostgreSQL database server will automatically be started inside the VM. You can use the `psql` command-line tool to access it and run SQL statements. Run `\c tournament` to run the database.
+The PostgreSQL database server will automatically be started inside the VM. You can use the `psql` command-line tool to access it and run SQL statements. Run `\c tournament` to connect to the database.
 
     ```
     vagrant@vagrant:/vagrant/tournament$ psql
