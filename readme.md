@@ -43,7 +43,7 @@ The shell prompt in your terminal may differ. Here, the `$` sign is the shell pr
     ```
     $cd Downloads/tournament
     $ ls
-    Vagrantfile  tournament.py  tournament.sql tournament_test.py readme.md
+    Vagrantfile  tournament.py  tournament.sql  tournament_test.py  readme.md
     ```
 
 - Start the virtual machine
