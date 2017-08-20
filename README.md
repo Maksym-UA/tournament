@@ -33,6 +33,11 @@ Vagrant is the software that configures the VM and lets you share files between 
 
 - You need to download [Vagrant file](Vagrantfile). It configures your VM settings. The file may be located inside your Downloads folder.
 
+   *If Vagrant is successfully installed, you will be able to run vagrant `--version`in your terminal to see the version number.
+The shell prompt in your terminal may differ. Here, the `$` sign is the shell prompt.*
+
+   ```$ vagrant --version```
+
 - Change to this directory in your terminal with `cd`. Inside, you will find another directory called vagrant. Change directory to the vagrant directory.
 
 - Start the virtual machine
